@@ -1,6 +1,10 @@
 [
     {
-        "merged": "D:\\yueju\\YueJu\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout-v16\\notification_template_custom_big.xml",
-        "source": "D:\\yueju\\YueJu\\mvp\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.0\\res\\layout-v16\\notification_template_custom_big.xml"
+        "merged": "/Users/99win/Project/YJ/Code/YueJu/D:\\yueju\\YueJu\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout-v16\\notification_template_custom_big.xml",
+        "source": "/Users/99win/Project/YJ/Code/YueJu/D:\\yueju\\YueJu\\mvp\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.0\\res\\layout-v16\\notification_template_custom_big.xml"
+    },
+    {
+        "merged": "/Users/99win/Project/YJ/Code/YueJu/mvp/build/intermediates/res/merged/androidTest/debug/layout-v16/notification_template_custom_big.xml",
+        "source": "/Users/99win/Project/YJ/Code/YueJu/mvp/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.0.0/res/layout-v16/notification_template_custom_big.xml"
     }
 ]

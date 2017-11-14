@@ -1,2 +1,2 @@
 <?xml version="1.0" encoding="utf-8"?>
-<merger version="3"><dataSet config="main"><source path="D:\yueju\YueJu\mvp\src\main\assets"/><source path="D:\yueju\YueJu\mvp\build\generated\assets\shaders\debug"/></dataSet><dataSet config="debug"><source path="D:\yueju\YueJu\mvp\src\debug\assets"/></dataSet></merger>
+<merger version="3"><dataSet config="main"><source path="/Users/99win/Project/YJ/Code/YueJu/mvp/src/main/assets"/><source path="/Users/99win/Project/YJ/Code/YueJu/mvp/build/generated/assets/shaders/debug"/></dataSet><dataSet config="debug"><source path="/Users/99win/Project/YJ/Code/YueJu/mvp/src/debug/assets"/></dataSet></merger>

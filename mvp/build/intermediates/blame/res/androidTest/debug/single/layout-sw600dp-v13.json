@@ -1,6 +1,10 @@
 [
     {
-        "merged": "D:\\yueju\\YueJu\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout-sw600dp-v13\\design_layout_snackbar.xml",
-        "source": "D:\\yueju\\YueJu\\mvp\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.3.0\\res\\layout-sw600dp-v13\\design_layout_snackbar.xml"
+        "merged": "/Users/99win/Project/YJ/Code/YueJu/D:\\yueju\\YueJu\\mvp\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout-sw600dp-v13\\design_layout_snackbar.xml",
+        "source": "/Users/99win/Project/YJ/Code/YueJu/D:\\yueju\\YueJu\\mvp\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.3.0\\res\\layout-sw600dp-v13\\design_layout_snackbar.xml"
+    },
+    {
+        "merged": "/Users/99win/Project/YJ/Code/YueJu/mvp/build/intermediates/res/merged/androidTest/debug/layout-sw600dp-v13/design_layout_snackbar.xml",
+        "source": "/Users/99win/Project/YJ/Code/YueJu/mvp/build/intermediates/exploded-aar/com.android.support/design/23.3.0/res/layout-sw600dp-v13/design_layout_snackbar.xml"
     }
 ]
