@@ -30,7 +30,6 @@ public class BaseFragment extends XFragment<TestPresent> implements ICommen {
         return new TestPresent();
     }
 
-
     @Override
     public void showError() {
 
