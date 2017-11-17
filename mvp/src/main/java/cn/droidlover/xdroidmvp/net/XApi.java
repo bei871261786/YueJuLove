@@ -95,7 +95,6 @@ public class XApi {
         Retrofit retrofit = builder.build();
         retrofitMap.put(baseUrl, retrofit);
         providerMap.put(baseUrl, provider);
-
         return retrofit;
     }
 

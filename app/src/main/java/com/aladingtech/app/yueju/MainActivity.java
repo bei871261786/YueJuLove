@@ -1,14 +1,30 @@
 package com.aladingtech.app.yueju;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class MainActivity extends AppCompatActivity {
+import cn.droidlover.xdroidmvp.mvp.XActivity;
+import cn.droidlover.xdroidmvp.net.NetError;
+import cn.droidlover.xdroidmvp.net.XApi;
+
+import static android.R.attr.type;
+import static android.nfc.tech.MifareUltralight.PAGE_SIZE;
+
+public class MainActivity extends XActivity {
+
+    String sendUrl="http://101.132.108.63:8080/ganded/user/sendVerify";
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+    public void initData(Bundle savedInstanceState) {
+
     }
 
+    @Override
+    public int getLayoutId() {
+        return R.layout.activity_main;
+    }
+
+    @Override
+    public Object newP() {
+        return null;
+    }
 }

@@ -14,7 +14,6 @@ import cn.droidlover.xdroidmvp.mvp.XFragment;
 
 public class BaseFragment extends XFragment<TestPresent> implements ICommen {
 
-
     @Override
     public void initData(Bundle savedInstanceState) {
 

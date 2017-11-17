@@ -9,6 +9,7 @@ import cn.droidlover.xdroidmvp.mvp.XActivity;
  */
 
 public class BActivity extends XActivity<PMulti> implements ICommonV {
+
     @Override
     public void initData(Bundle savedInstanceState) {
         getP().loadData();
@@ -24,9 +25,9 @@ public class BActivity extends XActivity<PMulti> implements ICommonV {
         return new PMulti();
     }
 
-
     @Override
     public void showError(Exception e) {
 
     }
+
 }
