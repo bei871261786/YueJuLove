@@ -1,4 +1,4 @@
-package com.aladingtech.app.yueju.common;
+package com.aladingtech.app.yueju.common.kits;
 
 /**
  * Created by wanglei on 2016/12/9.
