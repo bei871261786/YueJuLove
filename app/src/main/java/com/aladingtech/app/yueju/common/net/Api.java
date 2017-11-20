@@ -1,5 +1,8 @@
 package com.aladingtech.app.yueju.common.net;
 
+import com.aladingtech.app.yueju.common.kits.UrlKit;
+import com.aladingtech.app.yueju.common.net.service.SearchService;
+
 import cn.droidlover.xdroidmvp.net.NetError;
 import cn.droidlover.xdroidmvp.net.NetProvider;
 import cn.droidlover.xdroidmvp.net.RequestHandler;
@@ -14,55 +17,19 @@ import okhttp3.OkHttpClient;
  */
 
 public class Api {
-    private long mTimeoutMills = 15 * 1000L;
-//    private static  Event
 
-    private void initNet() {
-        XApi.registerProvider(new NetProvider() {
-            @Override
-            public Interceptor[] configInterceptors() {
-                return new Interceptor[0];
+    private static SearchService mSearchService;
+
+    public static SearchService getmSearchService() {
+        if (mSearchService == null) {
+            synchronized (Api.class) {
+                if (mSearchService == null) {
+                    mSearchService = XApi.getInstance().getRetrofit(UrlKit.API_BASE_URL, false).create(SearchService.class);
+                }
             }
-
-            @Override
-            public void configHttps(OkHttpClient.Builder builder) {
-
-            }
-
-            @Override
-            public CookieJar configCookie() {
-                return null;
-            }
-
-            @Override
-            public RequestHandler configHandler() {
-                return null;
-            }
-
-            @Override
-            public long configConnectTimeoutMills() {
-                return mTimeoutMills;
-            }
-
-            @Override
-            public long configReadTimeoutMills() {
-                return 0;
-            }
-
-            @Override
-            public boolean configLogEnable() {
-                return false;
-            }
-
-            @Override
-            public boolean handleError(NetError error) {
-                return false;
-            }
-
-            @Override
-            public boolean dispatchProgressEnable() {
-                return false;
-            }
-        });
+        }
+        return mSearchService;
     }
+
+
 }

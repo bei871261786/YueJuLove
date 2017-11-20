@@ -138,22 +138,6 @@ public class LogUtils {
         }
     }
 
-    /**
-     * 把Log存储到文件中
-     *
-     * @param log  需要存储的日志
-     * @param path 存储路径
-     */
-    public static void log2File(String log, String path) {
-        log2File(log, path, true);
-    }
-
-
-    public static void log2File(String log, String path, boolean append) {
-        synchronized (mLogLock) {
-            FileUtils.writeFile(log + "\r\n", path, append);
-        }
-    }
 
     /**
      * 以级别为 e 的形式输出msg信息,附带时间戳，用于输出一个时间段起始点

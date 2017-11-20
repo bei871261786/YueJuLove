@@ -6,11 +6,13 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.UnsupportedEncodingException;
 import java.security.Key;
 import java.security.KeyFactory;
 import java.security.KeyPair;
 import java.security.KeyPairGenerator;
 import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 import java.security.PrivateKey;
 import java.security.PublicKey;
 import java.security.SecureRandom;
@@ -79,6 +81,32 @@ public class Codec {
         }
 
 
+        //获取字符串的MD5值
+        public static String getStringMD5(String info) {
+            try {
+                MessageDigest md5 = MessageDigest.getInstance("MD5");
+                md5.update(info.getBytes("UTF-8"));
+                byte[] encryption = md5.digest();
+
+                StringBuffer strBuf = new StringBuffer();
+                for (int i = 0; i < encryption.length; i++) {
+                    if (Integer.toHexString(0xff & encryption[i]).length() == 1) {
+                        strBuf.append("0").append(Integer.toHexString(0xff & encryption[i]));
+                    } else {
+                        strBuf.append(Integer.toHexString(0xff & encryption[i]));
+                    }
+                }
+
+                return strBuf.toString();
+            } catch (NoSuchAlgorithmException e) {
+                return "";
+            } catch (UnsupportedEncodingException e) {
+                return "";
+            }
+        }
+
+
+
         private static String getMD5(final InputStream is, final int bufLen) {
             if (is == null || bufLen <= 0) {
                 return null;
@@ -110,7 +138,7 @@ public class Codec {
          * @param filePath 文件路径
          * @return
          */
-        public static String getMD5(final String filePath) {
+        public static String getFileMD5(final String filePath) {
             if (filePath == null) {
                 return null;
             }
