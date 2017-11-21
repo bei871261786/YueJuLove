@@ -5,12 +5,22 @@ package com.aladingtech.app.yueju.common.kits;
  */
 
 public class UrlKit {
-    public static final String API_BASE_URL = "http://101.132.108.63:8080/ganded/";
-    public static final String API_BAIDU_URL = "http://www.baidu.com";
+    private static boolean isTest = true;
+    private static final String BASE_TEST_URL = "http://101.132.108.63:8080/ganded/";
+    public static final String sendVerify = "user/sendVerify";//发送短信
+    public static final String login = "user/login";//发送短信
 
 //    public static final String ACTION_DATA_RESULT = "data/{type}/{number}/{page}";
 
-    public static String getUrl(String action) {
-        return new StringBuilder(API_BASE_URL).append(action).toString();
+
+    public static String getApiBaseUrl() {
+        if (isTest) {
+            return BASE_TEST_URL;
+        }
+        else {
+            return BASE_TEST_URL;
+        }
     }
+
+
 }

@@ -6,5 +6,6 @@ package com.aladingtech.app.yueju.common;
  */
 
 public class Configs {
-    public static String SIGN="shgo12al";
+    public static String SIGNKEY="shgo12al";
+    public static String SECRET="secret";
 }
