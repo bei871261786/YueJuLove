@@ -6,6 +6,7 @@ import android.view.View;
 
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
+import cn.droidlover.xdroidmvp.log.XLog;
 
 /**
  * Created by wanglei on 2016/11/27.
@@ -15,6 +16,7 @@ public class KnifeKit {
 
     public static Unbinder bind(Object target) {
         if (target instanceof Activity) {
+            XLog.d("KnifeKit Activity");
             return ButterKnife.bind((Activity) target);
         } else if (target instanceof Dialog) {
             return ButterKnife.bind((Dialog) target);
