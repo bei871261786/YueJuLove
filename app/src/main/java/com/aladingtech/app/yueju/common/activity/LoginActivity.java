@@ -6,6 +6,7 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 
 import com.aladingtech.app.yueju.R;
+import com.aladingtech.app.yueju.common.kits.UiKit;
 import com.aladingtech.app.yueju.common.present.LoginPresent;
 
 import butterknife.BindView;
@@ -25,7 +26,13 @@ public class LoginActivity extends BaseActivity<LoginPresent> {
     public void initData(Bundle savedInstanceState) {
         mListener = getP().getListener();
         login.setOnClickListener(mListener);
+        loginInputPhone.setHint(UiKit.getString(R.string.input_phone));
     }
+
+    public TextInputLayout genEditText() {
+        return loginInputPhone;
+    }
+
 
     @Override
     public int getLayoutId() {
@@ -38,13 +45,5 @@ public class LoginActivity extends BaseActivity<LoginPresent> {
         return new LoginPresent();
     }
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        // TODO: add setContentView(...) invocation
-        setContentView(R.layout.activity_login);
-        ButterKnife.bind(this);
-        mListener = getP().getListener();
-        login.setOnClickListener(mListener);
-    }
+
 }

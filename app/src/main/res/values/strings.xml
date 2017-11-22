@@ -1,7 +1,10 @@
 <resources>
     <string name="app_name">YueJu</string>
     <string name="input_phone">请输入手机号</string>
+    <string name="input_phone_error">请输入正确的手机号码</string>
     <string name="input_password">请输入验证码</string>
     <string name="login">登录</string>
+    <string name="next">下一步</string>
     <string name="descripe_threeLogin">第三方登录</string>
+    <string name="descripe_sendSuccess">发送成功,验证码即将赶到</string>
 </resources>
