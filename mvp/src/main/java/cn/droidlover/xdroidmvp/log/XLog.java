@@ -63,6 +63,14 @@ public class XLog {
         msg(Log.DEBUG, tag, msg, args);
     }
 
+    public static void i(String msg, Object... args) {
+        msg(Log.INFO, null, msg, args);
+    }
+
+    public static void i(String tag, String msg, Object... args) {
+        msg(Log.INFO, tag, msg, args);
+    }
+
     public static void e(String msg, Object... args) {
         msg(Log.ERROR, null, msg, args);
     }

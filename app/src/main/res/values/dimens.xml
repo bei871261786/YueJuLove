@@ -4,5 +4,9 @@
     <dimen name="v_aty_margin">16dp</dimen>
     <dimen name="h_aty_margin_double">32dp</dimen>
     <dimen name="v_aty_margin_double">32dp</dimen>
+    <dimen name="h_aty_margin_four">64dp</dimen>
+    <dimen name="v_aty_margin_four">64dp</dimen>
+    <dimen name="bt_sp_width">100dp</dimen>
+    <dimen name="bt_sp_height">40dp</dimen>
 
 </resources>

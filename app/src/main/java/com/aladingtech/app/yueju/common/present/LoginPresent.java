@@ -20,9 +20,10 @@ import cn.droidlover.xdroidmvp.router.Router;
 
 public class LoginPresent extends XPresent<LoginActivity> {
 
-    public void lauchToVerify() {
+    public void lauchToVerify(String phone) {
         Router.newIntent(getV())        //context表示当前上下文
-                .to(VertifyActivity.class)    //to()指定目标context
+                .to(VertifyActivity.class)  //to()指定目标context
+                .putString("phone", phone)//传递参数
                 .launch();
     }
 
@@ -34,7 +35,7 @@ public class LoginPresent extends XPresent<LoginActivity> {
         @Override
         public void onClick(View v) {
             switch (v.getId()) {
-                case R.id.login:
+                case R.id.nextStep:
                     //登录之前先检测输入手机号是否正确,不正确就提示重新输入,正确就进入下一步
                     TextInputLayout inputLayout = getV().genEditText();
                     EditText editText = inputLayout.getEditText();
@@ -43,12 +44,10 @@ public class LoginPresent extends XPresent<LoginActivity> {
                         inputLayout.setError(UiKit.getString(R.string.input_phone_error));
                     } else {
                         inputLayout.setErrorEnabled(false);
-                        lauchToVerify();
+                        lauchToVerify(phone);
                     }
-
                     break;
             }
-
         }
 
 

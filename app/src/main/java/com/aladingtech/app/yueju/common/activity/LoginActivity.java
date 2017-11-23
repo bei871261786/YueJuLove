@@ -16,8 +16,8 @@ import cn.droidlover.xdroidmvp.log.XLog;
 public class LoginActivity extends BaseActivity<LoginPresent> {
     @BindView(R.id.login_inputPhone)
     TextInputLayout loginInputPhone;
-    @BindView(R.id.login)
-    Button login;
+    @BindView(R.id.nextStep)
+    Button nextStep;
     @BindView(R.id.activity_login)
     LinearLayout activityLogin;
     private LoginPresent.LoginListener mListener;
@@ -25,7 +25,7 @@ public class LoginActivity extends BaseActivity<LoginPresent> {
     @Override
     public void initData(Bundle savedInstanceState) {
         mListener = getP().getListener();
-        login.setOnClickListener(mListener);
+        nextStep.setOnClickListener(mListener);
         loginInputPhone.setHint(UiKit.getString(R.string.input_phone));
     }
 
@@ -36,7 +36,6 @@ public class LoginActivity extends BaseActivity<LoginPresent> {
 
     @Override
     public int getLayoutId() {
-        XLog.d("getLayoutId:" + R.layout.activity_login);
         return R.layout.activity_login;
     }
 

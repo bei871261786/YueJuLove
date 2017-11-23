@@ -3,11 +3,12 @@ package com.aladingtech.app.yueju.common.activity;
 import android.os.Bundle;
 
 import com.aladingtech.app.yueju.R;
-import com.aladingtech.app.yueju.common.interfaces.ParamsHelperInterface;
+import com.aladingtech.app.yueju.common.net.ParamsHelperInterface;
 import com.aladingtech.app.yueju.common.kits.LogUtils;
 import com.aladingtech.app.yueju.common.kits.UrlKit;
 import com.aladingtech.app.yueju.common.net.NetManager;
-import com.aladingtech.app.yueju.search.model.TestModel;
+import com.aladingtech.app.yueju.common.models.TestModel;
+import com.aladingtech.app.yueju.common.net.StringModelCallback;
 import com.lzy.okgo.callback.StringCallback;
 
 import java.util.LinkedHashMap;
@@ -29,13 +30,12 @@ public class MainActivity extends XActivity {
                 params.put("mobile", mobile);
                 return params;
             }
-        }).start(new StringCallback() {
+        }).start(new StringModelCallback<TestModel>() {
             @Override
-            public void onSuccess(String s, Call call, Response response) {
-                LogUtils.i("onSuccess :"+s+":::"+response);
-            }
-        },this);
+            public void onSuccess(String s, TestModel model, Response response) {
 
+            }
+        }, this);
     }
 
     @Override

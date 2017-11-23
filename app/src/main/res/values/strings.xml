@@ -7,4 +7,5 @@
     <string name="next">下一步</string>
     <string name="descripe_threeLogin">第三方登录</string>
     <string name="descripe_sendSuccess">发送成功,验证码即将赶到</string>
+    <string name="descripe_sendFaild">发送失败,检查一下网络哦</string>
 </resources>

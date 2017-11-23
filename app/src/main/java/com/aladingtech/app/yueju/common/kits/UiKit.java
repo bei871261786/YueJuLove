@@ -98,6 +98,5 @@ public class UiKit {
         return getResources().getColorStateList(resId);
     }
 
-
 }
 

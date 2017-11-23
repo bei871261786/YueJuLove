@@ -1,4 +1,4 @@
-package com.aladingtech.app.yueju.common.interfaces;
+package com.aladingtech.app.yueju.common.net;
 
 import java.util.LinkedHashMap;
 

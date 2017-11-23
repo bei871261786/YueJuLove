@@ -2,7 +2,6 @@ package com.aladingtech.app.yueju.common.net;
 
 import com.aladingtech.app.yueju.common.Configs;
 import com.aladingtech.app.yueju.common.exception.MyException;
-import com.aladingtech.app.yueju.common.interfaces.ParamsHelperInterface;
 import com.aladingtech.app.yueju.common.kits.StorageKit;
 import com.aladingtech.app.yueju.common.kits.UrlKit;
 import com.lzy.okgo.OkGo;
@@ -38,7 +37,7 @@ public class NetManager<T> {
         return this;
     }
 
-    public void start(StringCallback callback, Object tag) {
+    public void start(StringModelCallback<T> callback, Object tag) {
         try {
             if (mMode.equals("post")) {
                 OkGo.post(mUrl).tag(tag).params(mParams).execute(callback);//开始 post 请求
