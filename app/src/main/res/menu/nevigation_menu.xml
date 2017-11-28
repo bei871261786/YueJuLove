@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/turntable"
+        android:icon="@mipmap/ic_launcher"
+        android:title="幸运转盘"/>
+    <item
+        android:id="@+id/finder"
+        android:icon="@mipmap/ic_launcher"
+        android:title=" 发现"/>
+    <item
+    android:id="@+id/setting"
+    android:icon="@mipmap/ic_launcher"
+    android:title="设置"/>
+
+    <item
+        android:id="@+id/test"
+
+        android:title=" 测试"/>
+</menu>

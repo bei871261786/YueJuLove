@@ -1,11 +1,9 @@
 package com.aladingtech.app.yueju.common.present;
 
-import android.text.Editable;
-import android.text.TextWatcher;
+import android.text.format.DateUtils;
 import android.view.View;
 
 import com.aladingtech.app.yueju.R;
-import com.aladingtech.app.yueju.common.Configs;
 import com.aladingtech.app.yueju.common.activity.MainActivity;
 import com.aladingtech.app.yueju.common.activity.VertifyActivity;
 import com.aladingtech.app.yueju.common.kits.UrlKit;
@@ -16,11 +14,16 @@ import com.aladingtech.app.yueju.common.net.StringModelCallback;
 
 import java.util.LinkedHashMap;
 
+import cn.droidlover.xdroidmvp.XDroidConf;
+import cn.droidlover.xdroidmvp.kit.Codec;
+import cn.droidlover.xdroidmvp.kit.Kits;
 import cn.droidlover.xdroidmvp.log.XLog;
 import cn.droidlover.xdroidmvp.mvp.XPresent;
 import cn.droidlover.xdroidmvp.router.Router;
 import okhttp3.Call;
 import okhttp3.Response;
+
+import static android.R.attr.password;
 
 
 /**
@@ -79,55 +82,42 @@ public class VertifyPresent extends XPresent<VertifyActivity> {
     }
 
     public void beginLogn() {
+
         XLog.i("VertifyPresent beginLogn");
         NetManager<VertifyModel> manager = new NetManager<>();
+        final String type = "2";
+        final String mobile = mPhone;
+        final String password = Codec.MD5.getStringMD5(mPhone + getV().getVertify());
+        final String pushToken = "";
+        final String timestamp = Kits.Date.getYmdhms(System.currentTimeMillis());
         manager.post(UrlKit.login, new ParamsHelperInterface() {
             @Override
             public LinkedHashMap<String, String> getParamas() {
                 LinkedHashMap<String, String> params = new LinkedHashMap<String, String>();
-                params.put("type", "2");
-                params.put("mobile", mPhone);
-                params.put("password", mPhone);
-                params.put("pushToken", mPhone);
-                params.put("timestamp", mPhone);
-                params.put("sign", mPhone);
+                params.put("type", type);
+                params.put("mobile", mobile);
+                params.put("password", password);
+                params.put("pushToken", pushToken);
+                params.put("timestamp", timestamp);
                 return params;
             }
         }).start(new StringModelCallback<VertifyModel>() {
             @Override
             public void onSuccess(String s, VertifyModel model, Response response) {
-                XLog.i("sendVertify onSuccess:" + s + ":::" + response + ":::" + model);
-                getV().startCountDown();
-                getV().changeDecripe(true);
+                XLog.i("beginLogn onSuccess:" + s + ":::" + response + ":::" + model);
+                lauchToMainActivity();
             }
 
             @Override
             public void onError(Call call, Response response, Exception e) {
                 super.onError(call, response, e);
-                XLog.i("sendVertify onError:" + ":::" + response + "::::" + e);
-                getV().changeDecripe(false);
+                XLog.i("beginLogn onError:" + ":::" + response + "::::" + e);
             }
         }, this);
 
     }
 
-    public class VertifyListener implements View.OnClickListener, TextWatcher {
-
-        @Override
-        public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
-        }
-
-        @Override
-        public void onTextChanged(CharSequence s, int start, int before, int count) {
-
-        }
-
-        @Override
-        public void afterTextChanged(Editable s) {
-
-
-        }
+    public class VertifyListener implements View.OnClickListener {
 
         @Override
         public void onClick(View v) {
@@ -136,15 +126,12 @@ public class VertifyPresent extends XPresent<VertifyActivity> {
                     sendVertify();
                     break;
                 case R.id.login:
-                    lauchToMainActivity();
+                    beginLogn();
+
                     break;
             }
         }
     }
 
-
-    private void jumpToNextEdit() {
-
-    }
 
 }

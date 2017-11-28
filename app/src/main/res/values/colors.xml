@@ -3,6 +3,13 @@
 
     <!--主题-->
    <color name="base_pink">#f2a7e2</color>
+   <color name="base_blue">#0090FF</color>
+   <color name="base_lightgray">#bec2c9</color>
+   <color name="state_orige">#f5c893</color>
+   <color name="state_blue">#75c9c9</color>
+   <color name="state_gray">#bec2c9</color>
+   <color name="base_line">#595959</color>
+
 
     <!--登录页-->
 

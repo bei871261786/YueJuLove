@@ -4,8 +4,7 @@
     android:id="@+id/activity_vertify"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-   >
+    android:orientation="vertical">
 
 
     <RelativeLayout
@@ -48,72 +47,12 @@
         android:layout_marginTop="@dimen/v_aty_margin"
         android:text="@string/descripe_sendSuccess" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/h_aty_margin"
-        android:layout_marginRight="@dimen/h_aty_margin"
-        android:layout_marginTop="@dimen/v_aty_margin_double"
-        android:orientation="horizontal">
-
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center">
-
-            <EditText
-                android:id="@+id/vertify_edit1"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:background="@drawable/login_input_shape" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center">
-
-            <EditText
-                android:id="@+id/vertify_edit2"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:background="@drawable/login_input_shape" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center">
-
-            <EditText
-                android:id="@+id/vertify_edit3"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:background="@drawable/login_input_shape" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center">
-
-            <EditText
-                android:id="@+id/vertify_edit4"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:background="@drawable/login_input_shape" />
-
-        </LinearLayout>
-
-
-    </LinearLayout>
+ <com.aladingtech.app.yueju.common.widget.VertifyEditView
+     android:layout_width="match_parent"
+     android:id="@+id/vertifyEdittext"
+     android:layout_gravity="center_horizontal"
+     android:layout_margin="@dimen/v_aty_margin"
+     android:layout_height="wrap_content"></com.aladingtech.app.yueju.common.widget.VertifyEditView>
 
 
     <Button

@@ -33,7 +33,6 @@ public class LoginActivity extends BaseActivity<LoginPresent> {
         return loginInputPhone;
     }
 
-
     @Override
     public int getLayoutId() {
         return R.layout.activity_login;
@@ -43,6 +42,4 @@ public class LoginActivity extends BaseActivity<LoginPresent> {
     public LoginPresent newP() {
         return new LoginPresent();
     }
-
-
 }

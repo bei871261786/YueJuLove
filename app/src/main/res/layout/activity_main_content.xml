@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+  <!--底下的四个tab-->
+  <RadioGroup
+      android:id="@+id/mHomeRadioGroup"
+      android:layout_width="match_parent"
+      android:layout_height="@dimen/home_tabs_height"
+      android:layout_alignParentBottom="true"
+      android:orientation="horizontal">
+
+    <RadioButton
+        android:id="@+id/home_explore"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:button="@null"
+        android:drawableTop="@mipmap/login_account"
+        android:checked="true"
+        android:gravity="center"
+        android:paddingTop="@dimen/v_aty_margin_half"
+        android:text=" 探索"
+        android:textColor="@drawable/tab_txt_selector"  />
+
+    <RadioButton
+        android:id="@+id/home_society"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:button="@null"
+        android:drawableTop="@mipmap/login_account"
+        android:gravity="center"
+        android:paddingTop="@dimen/v_aty_margin_half"
+        android:text="社团"
+        android:textColor="@drawable/tab_txt_selector"  />
+
+    <RadioButton
+        android:id="@+id/home_msg"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:button="@null"
+        android:drawableTop="@mipmap/login_account"
+        android:gravity="center"
+        android:paddingTop="@dimen/v_aty_margin_half"
+        android:text="消息"
+        android:textColor="@drawable/tab_txt_selector" />
+
+    <RadioButton
+        android:id="@+id/home_mine"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:button="@null"
+        android:drawableTop="@mipmap/login_account"
+        android:gravity="center"
+        android:paddingTop="@dimen/v_aty_margin_half"
+        android:text="我的"
+        android:textColor="@drawable/tab_txt_selector" />
+
+  </RadioGroup>
+
+</RelativeLayout>
+

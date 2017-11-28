@@ -26,14 +26,14 @@ public class NetManager<T> {
 
     public NetManager post(String url, ParamsHelperInterface helper) {
         mMode = "post";
-        mUrl = UrlKit.getApiBaseUrl()+url;
+        mUrl = UrlKit.getApiBaseUrl() + url;
         mParams = getHeadParams(helper.getParamas());
         return this;
     }
 
     public NetManager get(String url) {
         mMode = "get";
-        mUrl = UrlKit.getApiBaseUrl()+url;
+        mUrl = UrlKit.getApiBaseUrl() + url;
         return this;
     }
 
@@ -52,6 +52,7 @@ public class NetManager<T> {
     }
 
     private LinkedHashMap<String, String> getHeadParams(LinkedHashMap<String, String> params) {
+        XLog.d("getHeadParams  base params:" + params);
         StringBuilder sb = new StringBuilder();
         if (params != null) {
             Iterator<String> iterator = params.keySet().iterator();
@@ -60,18 +61,22 @@ public class NetManager<T> {
                 String key = iterator.next();
                 list.add((String) params.get(key));
             }
-            for (int i = list.size() - 1; i >= 0; i--) {
+
+            for (int i = 0; i < list.size(); i++) {
                 sb.append(list.get(i));
             }
+
         } else {
             params = new LinkedHashMap();
         }
+
         String sign = "";
         String secret = StorageKit.getSecret();
+
+        XLog.d("getHeadParams  sign params:" + secret + ":::" + "::::" + Configs.SIGNKEY + sb.toString());
         sign = Codec.MD5.getStringMD5(secret + Configs.SIGNKEY + sb.toString());
         XLog.d("getHeadParams  params:" + sign + ":::" + sb.toString());
         params.put("sign", sign);
-//        params.put("secret", secret);
         return params;
     }
 }
