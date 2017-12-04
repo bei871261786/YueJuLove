@@ -1,6 +1,6 @@
 package com.aladingtech.app.yueju.common.present;
 
-import com.aladingtech.app.yueju.search.interfaces.ICommen;
+import com.aladingtech.app.yueju.explore.interfaces.ICommen;
 
 import cn.droidlover.xdroidmvp.mvp.XPresent;
 

@@ -1,9 +1,6 @@
-package com.aladingtech.app.yueju.search.interfaces;
+package com.aladingtech.app.yueju.explore.interfaces;
 
-import android.os.Bundle;
-import android.view.View;
-
-import com.aladingtech.app.yueju.search.present.TestPresent;
+import com.aladingtech.app.yueju.explore.present.TestPresent;
 
 import cn.droidlover.xdroidmvp.mvp.IView;
 

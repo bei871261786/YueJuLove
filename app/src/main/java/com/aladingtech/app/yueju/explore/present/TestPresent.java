@@ -1,6 +1,6 @@
-package com.aladingtech.app.yueju.search.present;
+package com.aladingtech.app.yueju.explore.present;
 
-import com.aladingtech.app.yueju.search.fragment.BaseFragment;
+import com.aladingtech.app.yueju.explore.fragment.BaseFragment;
 
 import cn.droidlover.xdroidmvp.mvp.XPresent;
 
